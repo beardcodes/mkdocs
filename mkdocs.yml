@@ -1,0 +1,78 @@
+site_name: beardnetworks Docs
+
+theme:
+  icon:
+    admonition:
+      bug: fontawesome/solid/robot
+  name: material
+
+  palette: 
+    # Palette toggle for light mode
+    - scheme: default
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.instant.preview
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - toc.follow
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - navigation.footer
+
+plugins:
+  - search
+  - tags:
+      tags_file: tags.md
+  - blog
+
+markdown_extensions:
+
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - attr_list
+  - md_in_html
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - attr_list
+  - md_in_html
+
+
+nav:
+  - Home: index.md
+  - Home Server: 
+    - SSH: home-server/ssh.md
+    - Docker: home-server/docker.md
+  # - About:
+  #   - About Me: about/about.md
+  #   - Childhood: about/childhood.md
+  - Tags: tags.md
+  - Blog:
+    - blog/index.md
+
+
+# extra_css:
+#   - stylesheets/extra.css
+
+copyright: Copyright &copy; 2024 Beardnetworks
+extra:
+  generator: false
