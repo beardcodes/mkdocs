@@ -5,7 +5,7 @@ theme:
     admonition:
       bug: fontawesome/solid/robot
   name: material
-
+  
   palette: 
     # Palette toggle for light mode
     - scheme: default
@@ -62,6 +62,8 @@ nav:
   - Home Server: 
     - SSH: home-server/ssh.md
     - Docker: home-server/docker.md
+    - Mapped Network Drive: home-server/mapped-network-drive.md
+    - Remote Desktop: home-server/remote-desktop.md
   # - About:
   #   - About Me: about/about.md
   #   - Childhood: about/childhood.md
@@ -70,9 +72,18 @@ nav:
     - blog/index.md
 
 
-# extra_css:
-#   - stylesheets/extra.css
+extra_css:
+  - stylesheets/extra.css
 
 copyright: Copyright &copy; 2024 Beardnetworks
 extra:
   generator: false
+
+extra:
+  consent:
+    title: Cookie consent
+    description: >- 
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.
