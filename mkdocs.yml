@@ -62,8 +62,12 @@ nav:
   - Home Server: 
     - SSH: home-server/ssh.md
     - Docker: home-server/docker.md
+    - AdGuard: home-server/adguard.md
     - Mapped Network Drive: home-server/mapped-network-drive.md
     - Remote Desktop: home-server/remote-desktop.md
+  - Hack The Box:
+    - Editorial: hack-the-box/editorial.md
+    - Boardlight: hack-the-box/boardlight.md
   # - About:
   #   - About Me: about/about.md
   #   - Childhood: about/childhood.md
