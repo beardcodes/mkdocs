@@ -64,6 +64,7 @@ nav:
     - Docker: home-server/docker.md
     - AdGuard: home-server/adguard.md
     - Mapped Network Drive: home-server/mapped-network-drive.md
+    - Diun: home-server/diun.md
     - Remote Desktop: home-server/remote-desktop.md
   - Hack The Box:
     - Editorial: hack-the-box/editorial.md

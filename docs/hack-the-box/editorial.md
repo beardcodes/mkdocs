@@ -482,7 +482,7 @@ Please make sure you have the correct access rights
 and the repository exists.
 '
 prod@editorial:/opt/internal_apps/clone_changes$ cat /tmp/root 
-a249b4b9c9b00abadf5161e28dee8bfa
+a249b4b9c9b00abadf5161e28...
 ```
 
 ![flag.png](../assets/images/editorial/flag.png)
