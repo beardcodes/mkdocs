@@ -107,6 +107,7 @@ nav:
       - Prowlarr: docker-containers/prowlarr.md
       - Sonarr: docker-containers/sonarr.md
       - Radarr: docker-containers/radarr.md
+      - Chaptarr: docker-containers/chaptarr.md
       - Bazarr: docker-containers/bazarr.md
       - qBittorrent: docker-containers/qbittorrent.md
       - SABnzbd: docker-containers/sabnzbd.md
@@ -129,6 +130,8 @@ nav:
       - IT-Tools: docker-containers/it-tools.md
       - Excalidraw: docker-containers/excalidraw.md
       - Papra: docker-containers/papra.md
+      - Attic: docker-containers/attic.md
+      - CompDesk: docker-containers/compdesk.md
       - Firefly III: docker-containers/firefly-iii.md
   - Kubernetes:
     - Set up K3s: kubernetes/k3s-installation.md
