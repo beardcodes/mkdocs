@@ -147,6 +147,23 @@ Mealie has its own user accounts, so it does not need [Tinyauth](tinyauth.md) in
 
 **Settings → Users**. Households separate meal plans and shopping lists while sharing the recipe library, which is the right model for a shared house — everyone sees the same recipes, nobody's shopping list gets mixed up.
 
+## 8. Ghee on your phone
+
+The web UI works on a phone, but a shop with one bar of signal is where it falls down. [Ghee](https://github.com/dmitriiser/ghee-app) is a native companion app for Mealie: recipes, shopping lists, and favourites downloaded for offline use. Nothing to deploy — it talks to the Mealie API you already have.
+
+- [iOS](https://apps.apple.com/us/app/ghee-for-mealie/id6758328014)
+- [Android](https://play.google.com/store/apps/details?id=casa.dsen.ghee)
+
+Point it at the same address you use in the browser — the `BASE_URL` — and log in with your Mealie account. If you only reach Mealie over [wg-easy](wg-easy.md), the VPN has to be up when it syncs; the offline copies cover you in the shop.
+
+**If Mealie logs in through OIDC** (Authentik, Pocket ID), the provider needs one extra redirect URI on the client Mealie already uses:
+
+```
+ghee://oauth/callback
+```
+
+Exact match, no trailing slash, and keep the existing web redirect URIs. This needs Mealie v3.23.0+ and Ghee 1.6.0+. Google and Microsoft sign-in do not work with Ghee yet. Details in Ghee's [OIDC guide](https://github.com/dmitriiser/ghee-app/blob/master/docs/oidc-setup.md).
+
 ## Updating
 
 ```bash
@@ -190,6 +207,8 @@ Stop it first — SQLite.
 **Cannot log in after an update.** Check the logs for a failed migration. This is why you pin the version and back up first.
 
 **Permission denied writing to the data directory.** PUID/PGID do not match the volume owner. On Unraid use 99/100.
+
+**Ghee shows a redirect URI error on login.** `ghee://oauth/callback` is missing from the OIDC client, or has a trailing slash.
 
 **Recipe images vanished after a restore.** They live in the data volume alongside the database — restore the whole thing, not just the SQL.
 
