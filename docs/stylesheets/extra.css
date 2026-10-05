@@ -10,7 +10,9 @@
    they follow the theme in both light and dark.
    ========================================================================== */
 
-:root {
+/* body, not :root: the scheme attribute lives on body, and a var() resolved
+   on :root would freeze the light-scheme value into dark mode. */
+body {
   --bn-rule: var(--md-default-fg-color--lightest);
   --bn-muted: var(--md-default-fg-color--light);
 }
